@@ -30,6 +30,9 @@
                             <constraint firstAttribute="trailing" secondItem="89M-zT-YAH" secondAttribute="trailing" id="riS-vr-bVU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coolTableView" destination="89M-zT-YAH" id="rxj-DG-Qmo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
