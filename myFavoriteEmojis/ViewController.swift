@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var coolTableView: UITableView!
     
+    var emoji = ["😎 cool dude", "😡 angry dude", "😂 laughing dude", "🐤 chicken dude", "⚡️ lightning dude", "🗿 dum dum give me", "😱 shocked dude"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,13 +29,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //number of rows
-        return 100
+        return emoji.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //what do you want in the cells
+        print(indexPath.row)
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello 😎"
+        cell.textLabel?.text = emoji[indexPath.row]
         return cell
     }
 
